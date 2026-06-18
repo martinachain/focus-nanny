@@ -41,7 +41,28 @@
 
 ---
 
-## 三、部署（第一次安装）
+## ⚡ 快速安装（推荐，也适合丢给 AI 装）
+
+```bash
+git clone https://github.com/martinachain/focus-nanny.git
+cd focus-nanny
+bash install.sh
+```
+
+`install.sh` 会自动：用 Homebrew 装 Hammerspoon、把 `init.lua` 放到 `~/.hammerspoon/`（已有配置会先备份）、建一个 `~/Desktop/今日任务.txt`、启动 Hammerspoon。
+
+**最后一步必须你本人操作**（macOS 安全机制，任何程序/AI 都无法代劳）：
+
+> 系统设置 › 隐私与安全性 › **辅助功能** → 打开 **Hammerspoon** 开关。
+> focus-nanny 靠它读窗口标题判断摸鱼，不授权红卡片不会弹。授权后点菜单栏 🔨 → Reload Config（或重跑 `install.sh`）。
+
+> 💡 把本仓库地址丢给你的 AI（Claude Code / Cursor 等），让它执行上面三行命令也行——它能装到「就差授权」，那一步它会提醒你手动点一下。
+
+下面是不想用脚本时的**手动安装**步骤。
+
+---
+
+## 三、部署（手动，第一次安装）
 
 ### 1. 装 Hammerspoon
 去 https://www.hammerspoon.org/ 下载，拖进「应用程序」。
